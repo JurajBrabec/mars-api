@@ -4,7 +4,7 @@
   "description": "MARS API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JurajBrabec/mars-api/issues"
   },
-  "homepage": "https://github.com/JurajBrabec/mars-api#readme"
+  "homepage": "https://github.com/JurajBrabec/mars-api#readme",
+  "dependencies": {
+    "express": "~4.16.1"
+  }
 }
