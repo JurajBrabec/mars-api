@@ -2,9 +2,10 @@
   "name": "mars-api",
   "version": "1.0.0",
   "description": "MARS API",
-  "main": "index.js",
+  "main": "api.js",
   "scripts": {
-    "start": "node ./index.js"
+    "build": "rollup --config",
+    "start": "node ./api.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,12 @@
   "homepage": "https://github.com/JurajBrabec/mars-api#readme",
   "dependencies": {
     "express": "~4.16.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "rollup": "^2.23.0",
+    "rollup-plugin-terser": "^6.1.0"
   }
 }
