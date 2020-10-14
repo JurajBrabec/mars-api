@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const defaultConfig = require('./get-config');
 
 app.get('/', (req, res) => res.send('Hello World!'));
-app.get('/api', (req, res) => res.send('{api:1}'));
+app.get('/api', (req, res) => res.json(defaultConfig));
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
