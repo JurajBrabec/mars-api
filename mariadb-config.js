@@ -1,5 +1,5 @@
 module.exports = {
-  host: 'mars.local',
+  host: process.env.NODE_ENV == 'production' ? 'localhost' : 'mars.local',
   port: 3306,
   user: 'operator',
   password: '',
