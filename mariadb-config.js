@@ -9,5 +9,5 @@ module.exports = {
   namedPlaceholders: true,
   queryTimeout: 300000,
   socketTimeout: 300000,
-  acquireTimeout: 300000,
+  acquireTimeout: 1000,
 };
