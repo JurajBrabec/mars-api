@@ -1,10 +1,3 @@
-//const apicache = require('apicache');
-//const express = require('express');
-//const bodyParser = require('body-parser');
-//const db = require('./mariadb');
-//const table = require('./table');
-//const defaultConfig = require('./get-config');
-
 import apicache from 'apicache';
 import express from 'express';
 import bodyParser from 'body-parser';
