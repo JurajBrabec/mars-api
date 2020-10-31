@@ -78,4 +78,4 @@ const formatValue = (type, value) => {
   }
 };
 
-module.exports = table;
+export default table;

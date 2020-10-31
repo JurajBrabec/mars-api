@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   root: 'M:\\MARS\\',
   towers: [{ name: 'All towers' }],
   customers: [{ name: 'All customers' }],

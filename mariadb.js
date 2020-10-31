@@ -1,6 +1,9 @@
-const mariadb = require('mariadb');
-const config = require('./mariadb-config.js');
+//const mariadb = require('mariadb');
+//const config = require('./mariadb-config.js');
+
+import mariadb from 'mariadb';
+import config from './mariadb-config.js';
 
 const pool = mariadb.createPool(config);
 
-module.exports = pool;
+export default pool;

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   host: process.env.NODE_ENV == 'production' ? 'localhost' : 'mars.local',
   port: 3306,
   user: 'operator',

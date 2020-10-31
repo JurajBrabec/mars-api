@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "MARS API",
   "main": "api.js",
+  "type": "module",
   "scripts": {
     "build": "rollup --config",
     "start": "nodemon ./api.js"

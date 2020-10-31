@@ -1,16 +1,22 @@
-const apicache = require('apicache');
-const express = require('express');
-const bodyParser = require('body-parser');
-const db = require('./mariadb');
-const table = require('./table');
+//const apicache = require('apicache');
+//const express = require('express');
+//const bodyParser = require('body-parser');
+//const db = require('./mariadb');
+//const table = require('./table');
+//const defaultConfig = require('./get-config');
+
+import apicache from 'apicache';
+import express from 'express';
+import bodyParser from 'body-parser';
+import db from './mariadb.js';
+import htmlTable from './table.js';
+import defaultConfig from './get-config.js';
 
 const app = express();
 const cache = apicache.middleware;
 //app.use(cache('5 minutes'));
 app.use(bodyParser.json());
 const port = 3000;
-
-const defaultConfig = require('./get-config');
 
 app.get('/', (req, res) => {
   res.redirect('/api');
@@ -82,7 +88,7 @@ app.get('/api/v1/html/:report', async (req, res) => {
     if (customer) sql = `set @customer='${customer}';${sql}`;
     if (timePeriod) sql = `set @datetime_from='${timePeriod}';${sql}`;
     const data = await db.query(sql);
-    res.send(table(source.name, fields, formats, links, data));
+    res.send(htmlTable(source.name, fields, formats, links, data));
   } catch (error) {
     res.status(400).json({ error });
     console.log(error);
