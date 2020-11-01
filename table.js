@@ -1,5 +1,5 @@
-const table = (id, fields, formats, links, data) =>
-  `${tableStyles(formats)}<table id="${id}">\n${tableRow(
+const table = ({ source, fields, formats, links, data }) =>
+  `${tableStyles(formats)}<table id="${source.name}">\n${tableRow(
     tableHeader(fields, [])
   )}${tableData(fields, formats, data).join('')}</table>`;
 
@@ -8,7 +8,7 @@ const styles = (formats) => [
 ];
 
 const tableStyles = (formats) =>
-  `<style> ${styles(formats)
+  `<style>${styles(formats)
     .map((style, i) => `.c${i} {${style}}`)
     .join(' ')}</style>\n`;
 
