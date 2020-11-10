@@ -5,7 +5,7 @@ module.exports = {
 	  cwd: './api',
       script: './api.js',
       time: true,
-      watch: '.',
+      watch: './api',
       env: {
         NODE_ENV: 'production',
       },

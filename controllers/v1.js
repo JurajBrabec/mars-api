@@ -28,7 +28,8 @@ export const report = async (req, res) => {
         .json({ error: `Invalid report name '${reportName}'` });
     const source = sources[0];
     const result = await db.data({ source, tower, customer, timePeriod });
-    const data = result.pop();
+    const data =
+      result.length && Array.isArray(result[0]) ? result.pop() : result;
     switch (mode) {
       case 'html':
         const fields = await db.fields(reportName);
