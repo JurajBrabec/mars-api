@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'api',
 	  cwd: './api',
-      script: './api.js',
+      script: './index.js',
       time: true,
       watch: './api',
       env: {

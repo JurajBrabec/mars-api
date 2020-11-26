@@ -4,9 +4,9 @@ import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: './api.js',
+  input: './index.js',
   output: {
-    file: './build/api.js',
+    file: './build/index.js',
     format: 'cjs',
     name: 'api',
   },

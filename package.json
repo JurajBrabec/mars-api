@@ -2,11 +2,11 @@
   "name": "mars-api",
   "version": "1.0.0",
   "description": "MARS API",
-  "main": "api.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "rollup --config",
-    "start": "nodemon ./api.js"
+    "start": "nodemon ./index.js"
   },
   "repository": {
     "type": "git",
